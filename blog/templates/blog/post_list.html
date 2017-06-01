@@ -1,18 +1,18 @@
+
 <html>
-	<head>
-		<title>My First Blog</title>
-	</head>
-	<body>
-		<div>
-			<h4>My First Blog using Python and Django Framework</h4>
-		</div>
-		<div>
-			<h3>
-				Passage of Time
-			</h3>
-		</div>
-		<div>
-			Time,as we all know flows according to its own way.No one have control over it.But as it passes leves memories.Memories that may be good or bad ,each in our mind.Some stays in heart forever while some again fades with upcoming time.So the most important thing is to make right use of time when we have opportunity and chances otherwise we may have bad memories and that may effect our lives.
-		</div>
-	</body>
-</html>
+    <head>
+        <title>First Blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Django Girls Blog</a></h1>
+        </div>
+     {% for post in posts %}
+    	<div>
+	        <p>published: {{ post.published_date }}</p>
+	        <h1><a href="">{{ post.title }}</a></h1>
+	        <p>{{ post.text|linebreaksbr }}</p>
+    	</div>
+{% endfor %}
+    </body>
+</html
